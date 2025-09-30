@@ -1,0 +1,194 @@
+/* Responsive design */
+
+/* Tablet and small desktop adjustments */
+@media (min-width: 481px) and (max-width: 768px) {
+  .app-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .app-main {
+    padding: 1.5rem;
+  }
+
+  .chart-row {
+    gap: 1.5rem;
+  }
+
+  .controls-section {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .filter-controls {
+    flex: 1;
+    min-width: 250px;
+  }
+
+  .category-select {
+    min-width: 200px;
+  }
+}
+
+/* Tablet adjustments */
+@media (max-width: 768px) {
+  .app-main {
+    padding: 1rem;
+  }
+
+  .app-header {
+    padding: 1rem;
+  }
+
+  .app-header h1 {
+    font-size: 2rem;
+  }
+
+  .chart-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .controls-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .category-select {
+    min-width: auto;
+  }
+
+  .categories-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile-first responsive design */
+@media (max-width: 480px) {
+  .app {
+    font-size: 14px;
+  }
+
+  .app-header {
+    padding: 1rem 0.5rem;
+  }
+
+  .app-header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .app-header p {
+    font-size: 0.9rem;
+  }
+
+  .app-main {
+    padding: 0.5rem;
+  }
+
+  .controls-section {
+    margin-bottom: 1rem;
+  }
+
+  .filter-controls {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .filter-controls label {
+    font-size: 0.9rem;
+  }
+
+  .category-select {
+    width: 100%;
+    max-width: calc(100vw - 2rem);
+    padding: 0.75rem;
+    font-size: 1rem;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  .refresh-button, .retry-button {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .stats-summary {
+    padding: 1rem;
+  }
+
+  .stats-summary h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .chart-container {
+    padding: 1rem;
+  }
+
+  .chart-container h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .chart-container .recharts-wrapper {
+    margin: 0 auto;
+  }
+
+  .category-list {
+    padding: 1rem;
+  }
+
+  .category-list h3 {
+    font-size: 1.1rem;
+  }
+
+  .categories-grid {
+    gap: 0.5rem;
+  }
+
+  .category-item {
+    padding: 0.5rem;
+  }
+
+  .app-footer {
+    padding: 1rem 0.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Chart responsiveness */
+@media (max-width: 480px) {
+  .chart-container .recharts-wrapper {
+    font-size: 12px;
+  }
+
+  .chart-container .recharts-cartesian-axis-tick-value {
+    font-size: 10px;
+  }
+
+  .chart-container .recharts-legend-item-text {
+    font-size: 12px;
+  }
+}
+
+/* Touch-friendly interactions */
+@media (hover: none) and (pointer: coarse) {
+  .refresh-button, .retry-button {
+    min-height: 44px;
+  }
+
+  .category-select {
+    min-height: 44px;
+  }
+
+  .category-item {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+}
